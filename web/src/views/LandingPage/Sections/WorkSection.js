@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+
+//Material UI
 
 // @material-ui/icons
 
@@ -12,10 +14,43 @@ import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
+const axios = require('axios').default;
+
 const useStyles = makeStyles(styles);
 
 export default function WorkSection() {
   const classes = useStyles();
+
+  /**
+   * 
+   * @param {*} event from form
+   * 
+   * Aqui mandamos el correo del form
+   * 
+   * Validamos
+   */
+  function sendForm(event) {
+    event.preventDefault();
+
+    const body = {
+      application: {
+        name: event.target.name.value,
+        email: event.target.email.value,
+        message: event.target.message.value
+      }
+    }
+
+
+
+    event.target.name.value = ""
+    event.target.email.value = ""
+    event.target.message.value = ""
+
+    const url = "https://us-central1-neurofinanzaswebpage.cloudfunctions.net/sendMail"
+
+    axios.post(url, body);
+  }
+
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
@@ -23,9 +58,9 @@ export default function WorkSection() {
           <h2 className={classes.title}>Unete a nuestro voluntariado</h2>
           <h4 className={classes.description}>
             Descripcion de lo que senecesita para ser volutario y motivacion bonita para que la gente quiera
-            entrar. Un saludo cuki
+            entrar.
           </h4>
-          <form>
+          <form onSubmit={sendForm}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
@@ -59,7 +94,7 @@ export default function WorkSection() {
               />
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                  <Button color="primary">Send Message</Button>
+                  <Button color="primary" type="submit">¡Enviar!</Button>
                 </GridItem>
               </GridContainer>
             </GridContainer>
