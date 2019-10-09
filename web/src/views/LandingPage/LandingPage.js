@@ -18,6 +18,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
+import AffiliatesSection from "./Sections/AffiliatesSection"
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
@@ -75,6 +76,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection /> {/* TODO: Descripcion de sus productos y cambiar iconos */}
           {/* TODO: Affiliation section */}
+          <AffiliatesSection /> {/* TODO: Fotos, nombres e informacion de los miembros */}
           <TeamSection /> {/* TODO: Fotos, nombres e informacion de los miembros */}
           <WorkSection /> {/* TODO:  Informacion sobre voluntariado y descripcion*/}
         </div>
