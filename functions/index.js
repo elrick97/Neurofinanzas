@@ -1,46 +1,51 @@
 const functions = require('firebase-functions');
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 const cors = require('cors')({ origin: true });
-
-// Create and Deploy Your First Cloud Functions
-// https://firebase.google.com/docs/functions/write-firebase-functions
-
-/**
-* Nodemailer setup
-*/
-let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'yourgmailaccount@gmail.com',
-        pass: 'yourgmailaccpassword'
-    }
-});
-
-exports.helloWorld = functions.https.onRequest((request, response) => {
-    response.send("Hello from Firebase!");
-});
 
 exports.sendMail = functions.https.onRequest((req, res) => {
     cors(req, res, () => {
 
-        // getting dest email by query string
-        const body = req.body;
-        console.log(body);
-        return res.send(body)
+        /**
+        * Nodemailer setup
+        */
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'neurovoluntarios@gmail.com',
+                pass: 'neurofinanzas97'
+            }
+        });
 
-        // const mailOptions = {
-        //     from: 'Your Account Name <yourgmailaccount@gmail.com>', // Something like: Jane Doe <janedoe@gmail.com>
-        //     to: 'ricardo.rmz.a97@gmail.com',
-        //     subject: 'nueva aplicacion', // email subject
-        //     text: ''
-        // };
+        /** ASI LLEGA EL BODY 
+         *  {
+         *      applicacion: {
+         *          name: 
+         *          email:
+         *          motto:
+         *      }
+         *  }
+         */
 
-        // returning result
-        // return transporter.sendMail(mailOptions, (erro, info) => {
-        //     if (erro) {
-        //         return res.send(erro.toString());
-        //     }
-        //     return res.send('Sended');
-        // });
+        // Objeto application
+        const application = req.body.application;
+
+        // Construyendo el mensaje que se va enviar
+        const message = "Nombre: " + application.name + "\nEmail: " + application.email + "\nMessage: " + application.message
+
+        // estructura de nodemailer
+        const mailOptions = {
+            from: 'Aplicación Voluntarios <neurovoluntarios@gmail.com>',
+            to: 'j.elizondo126@gmail.com', // aqui va el mail a donde se enviaran todas las aplicaciones
+            subject: 'Alguien quiere unirse al equipo!', // email subject
+            text: message
+        };
+
+        // returning result 
+        return transporter.sendMail(mailOptions, (erro, info) => {
+            if (erro) {
+                return res.send(erro.toString());
+            }
+            return res.send('Sended');
+        });
     });
 });
