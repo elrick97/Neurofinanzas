@@ -23,8 +23,10 @@ export default function ProductSection() {
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Nuestra misión</h2>
           <h5 className={classes.description}>
-            Lograr autonomía financiera a través de activos que trabajan y brindan rendimientos y son propios.
-  Manejar de forma saludable las finanzas personales generando bienestar emocional y tranquilidad en el presente y futuro.
+          Lograr autonomía financiera a través de activos que trabajan y brindan rendimientos y son propios.
+          Manejar de forma saludable las finanzas personales generando bienestar emocional y tranquilidad en el presente y futuro.
+          En un pensamiento de la abundancia reconocer que el dinero es un medio para alcanzar otras metas y aprender a que “fluya” : 
+          ganando, invirtiendo y manejando de mejor manera la deuda.
           </h5>
         </GridItem>
       </GridContainer>

@@ -46,7 +46,7 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  quien es esta persona y alguna frase o no se pero algo aqui o que o que alksdf jahs dfljha sdjhf ajhsd flhja sdlhfbkahf
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel imperdiet est.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -86,7 +86,7 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  quien es esta persona y alguna frase o no se pero algo aqui o que o que alksdf jahs dfljha sdjhf ajhsd flhja sdlhfbkahf
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel imperdiet est.  
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -119,7 +119,7 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  quien es esta persona y alguna frase o no se pero algo aqui o que o que alksdf jahs dfljha sdjhf ajhsd flhja sdlhfbkahf
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel imperdiet est.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>

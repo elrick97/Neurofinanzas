@@ -16,9 +16,14 @@ import CardFooter from "components/Card/CardFooter.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+import tecFoto from "assets/img/logoTec.png";
+import inmobilariaLuxFoto from "assets/img/inmobilariaLuxLogo.jpeg";
+import zongaFoto from "assets/img/zongaLogo.png";
+import udemFoto from "assets/img/udemLogo.jpg";
+import secretariaFoto from "assets/img/secretariaEconomiaLogo.png";
+import ticketopolisFoto from "assets/img/ticketopolisLogo.png";
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -26,7 +31,7 @@ export default function TeamSection() {
   const classes = useStyles();
   const imageClasses = classNames(
     classes.imgRaised,
-    classes.imgRoundedCircle,
+    //classes.imgRoundedCircle,
     classes.imgFluid
   );
   return (
@@ -37,10 +42,32 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src="../../../assets/img/perfil.jpg" alt="..." className={imageClasses} />
+                <img src= {tecFoto} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Alianza 0
+                Tec de Monterrey
+                <br />
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <img src={inmobilariaLuxFoto} alt="..." className={imageClasses} />
+              </GridItem>
+              <h4 className={classes.cardTitle}>
+                Inmobiliaria Lux
+                <br />
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <img src= {zongaFoto} alt="..." className={imageClasses} />
+              </GridItem>
+              <h4 className={classes.cardTitle}>
+                Zonga
                 <br />
               </h4>
             </Card>
@@ -51,7 +78,29 @@ export default function TeamSection() {
                 <img src="../../../assets/img/perfil.jpg" alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Alianza 1
+                Embajada de USA en México
+                <br />
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <img src={secretariaFoto} alt="..." className={imageClasses} />
+              </GridItem>
+              <h4 className={classes.cardTitle}>
+                Secretaría de Economía de N. L
+                <br />
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <img src={udemFoto} alt="..." className={imageClasses} />
+              </GridItem>
+              <h4 className={classes.cardTitle}>
+                UDEM
                 <br />
               </h4>
             </Card>
@@ -62,7 +111,29 @@ export default function TeamSection() {
                 <img src="../../../assets/img/perfil.jpg" alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Alianza 2
+                Marketplace Literacy Project
+                <br />
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <img src= {ticketopolisFoto} alt="..." className={imageClasses} />
+              </GridItem>
+              <h4 className={classes.cardTitle}>
+                Ticketopolis
+                <br />
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <img src="../../../assets/img/perfil.jpg" alt="..." className={imageClasses} />
+              </GridItem>
+              <h4 className={classes.cardTitle}>
+                Fotophy
                 <br />
               </h4>
             </Card>

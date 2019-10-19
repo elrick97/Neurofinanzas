@@ -55,10 +55,11 @@ export default function WorkSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Unete a nuestro voluntariado</h2>
+          <h2 className={classes.title}>¡Únete al equipo de Neurofinanzas!</h2>
           <h4 className={classes.description}>
-            Descripcion de lo que senecesita para ser volutario y motivacion bonita para que la gente quiera
-            entrar.
+          Ayuda a más personas a educarse para lograr la autonomía financiera y aprende mucho en la marcha.
+          ¡Genera relaciones a largo plazo,  y construye patrimonio propio! 
+          ¡JUNTOS ES POSIBLE!
           </h4>
           <form onSubmit={sendForm}>
             <GridContainer>
