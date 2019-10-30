@@ -22,11 +22,11 @@ export default function WorkSection() {
   const classes = useStyles();
 
   /**
-   * 
+   *
    * @param {*} event from form
-   * 
+   *
    * Aqui mandamos el correo del form
-   * 
+   *
    * Validamos
    */
   function sendForm(event) {
@@ -55,10 +55,10 @@ export default function WorkSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>¡Únete al equipo de Neurofinanzas!</h2>
+          <h2 className={classes.title} style={{color: "#35a849"}}>¡Únete al equipo de Neurofinanzas!</h2>
           <h4 className={classes.description}>
           Ayuda a más personas a educarse para lograr la autonomía financiera y aprende mucho en la marcha.
-          ¡Genera relaciones a largo plazo,  y construye patrimonio propio! 
+          ¡Genera relaciones a largo plazo,  y construye patrimonio propio!
           ¡JUNTOS ES POSIBLE!
           </h4>
           <form onSubmit={sendForm}>
@@ -95,7 +95,7 @@ export default function WorkSection() {
               />
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                  <Button color="primary" type="submit">¡Enviar!</Button>
+                  <Button color="primary" type="submit" round>¡Enviar!</Button>
                 </GridItem>
               </GridContainer>
             </GridContainer>

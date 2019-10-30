@@ -19,6 +19,8 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/team
 import team1 from "assets/img/faces/avatar.jpg";
 import team2 from "assets/img/faces/christian.jpg";
 import team3 from "assets/img/faces/kendall.jpg";
+import cutePic from "assets/img/cute.png"
+
 
 const useStyles = makeStyles(styles);
 
@@ -29,124 +31,39 @@ export default function TeamSection() {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
+  const names = ["Persona 0",
+                 "Persona 1",
+                 "Persona 2",
+                 "Persona 3",
+                 "Persona 4",
+                 "Persona 5",
+                 "Persona 6",
+                 "Persona 7",
+                 "Persona 8",
+                 "Persona 9",
+                 "Persona 10"];
+
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>Conoce al equipo</h2>
+      <h2 className={classes.title} style={{color: "#35a849"}}>Conoce al equipo</h2>
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src="../../../assets/img/perfil.jpg" alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Persona 0
-                <br />
-                <small className={classes.smallTitle}>Model</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel imperdiet est.
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-instagram"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-facebook"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src="../../../assets/img/perfil.jpg" alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Persona 1
-                <br />
-                <small className={classes.smallTitle}>Designer</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel imperdiet est.  
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-linkedin"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src="../../../assets/img/perfil.jpg" alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Persona 2
-                <br />
-                <small className={classes.smallTitle}>Model</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel imperdiet est.
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-instagram"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-facebook"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
+            {names.map((name) => {
+              return(
+                <GridItem xs={12} sm={12} md={4}>
+                  <Card plain>
+                    <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                      <img src={cutePic} alt="..." className={imageClasses} />
+                    </GridItem>
+                      <h4 className={classes.cardTitle}>
+                        {name}
+                      <br />
+                      <small className={classes.smallTitle}>Model</small>
+                    </h4>
+                  </Card>
+                </GridItem>
+              )
+            })}
         </GridContainer>
       </div>
     </div>

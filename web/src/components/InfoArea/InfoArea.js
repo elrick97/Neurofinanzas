@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Button from '../CustomButtons/Button.js';
 
 import styles from "assets/jss/material-kit-react/components/infoStyle.js";
 
@@ -28,8 +29,9 @@ export default function InfoArea(props) {
         <props.icon className={iconClasses} />
       </div>
       <div className={classes.descriptionWrapper}>
-        <h4 className={classes.title}>{title}</h4>
+        <h4 style={{color: "#35a849"}} className={classes.title}>{title}</h4>
         <p className={classes.description}>{description}</p>
+        <Button color="primary" round>Ver Mas</Button>
       </div>
     </div>
   );

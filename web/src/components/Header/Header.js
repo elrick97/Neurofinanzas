@@ -60,7 +60,7 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  const brandComponent = <Button className={classes.title}><img alt="" src={require('../../assets/img/logo-nf-blanco.svg')}/></Button>;
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

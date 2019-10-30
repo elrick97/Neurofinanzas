@@ -21,12 +21,12 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Nuestra misión</h2>
+          <h2 className={classes.title} style={{color: "#35a849"}}>NUESTRO PROPÓSITO</h2>
+          <h3 className={classes.description}>
+          Construimos prosperidad Social de Persona en persona, de Familia en Familia.
+          </h3>
           <h5 className={classes.description}>
-          Lograr autonomía financiera a través de activos que trabajan y brindan rendimientos y son propios.
-          Manejar de forma saludable las finanzas personales generando bienestar emocional y tranquilidad en el presente y futuro.
-          En un pensamiento de la abundancia reconocer que el dinero es un medio para alcanzar otras metas y aprender a que “fluya” : 
-          ganando, invirtiendo y manejando de mejor manera la deuda.
+          Somos una Asociación Civil cuya oferta promueve un modelo disruptivo de Educación Financiera.
           </h5>
         </GridItem>
       </GridContainer>
@@ -34,8 +34,8 @@ export default function ProductSection() {
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Activos que brindan rendimientos"
-              description="Aqui va una mejor descripcion y asi asdfljhasl kdjflas dflhja sdljfh asjhd f,a sdf,j asdfj, ,asjdhf lasjdhf lasdjhf laksjhdf ,jhasdf "
+              title=" Foro de Neurofinanzas"
+              description="Cada tercer miércoles de mes, charlamos sobre finanzas en un espacio incluyente y libre de ventas. ¡Toda la familia es bienvenida!"
               icon={Chat}
               iconColor="info"
               vertical
@@ -43,8 +43,8 @@ export default function ProductSection() {
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Manejar tus finanzas"
-              description="Aqui va una mejor descripcion y asi asdfljhasl kdjflas dflhja sdljfh asjhd f,a sdf,j asdfj, ,asjdhf lasjdhf lasdjhf laksjhdf ,jhasdf "
+              title="Educación Financiera para empresas"
+              description="Tenemos una metodología con programas registrados ante la STPS para que el dinero deje de ser un factor de estrés para el personal de tu empresaa."
               icon={VerifiedUser}
               iconColor="success"
               vertical
@@ -52,8 +52,8 @@ export default function ProductSection() {
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Bienestar Emocional y Tranquilidad"
-              description="Aqui va una mejor descripcion y asi asdfljhasl kdjflas dflhja sdljfh asjhd f,a sdf,j asdfj, ,asjdhf lasjdhf lasdjhf laksjhdf ,jhasdf "
+              title="Taller “Dinero a tu favor”"
+              description="Taller de 8 sesiones, para cambiar la forma en que te relacionas con el dinero y tomar mejores desiciones financieras para una vida próspera."
               icon={Fingerprint}
               iconColor="danger"
               vertical

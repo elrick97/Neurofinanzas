@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 // @material-ui/icons
 
@@ -35,7 +36,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Neurofinanzas"
+        brand=""
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -44,30 +45,27 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      {/* TODO <Parallax>: 
-              1.- Checar que imagen poner 
-              2.- Vamos ocupar boton? 
+      {/* TODO <Parallax>:
+              1.- Checar que imagen poner
+              2.- Vamos ocupar boton?
                 2.1.- A donde llevara el boton?
-              */}
-      <Parallax filter image={require("assets/img/landing-bg.jpg")}>
+         */}
+      <Parallax filter image={require("assets/img/landingbg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Empieza a cambiar tu historia con Neurofinanzas</h1>
-              <h4>
-                Creemos que el éxito está más allá de los miedos.
-              </h4>
+              <h1 className={classes.title}>Empieza a cambiar tu historia con Neurofinanzas.</h1>
               <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/channel/UCHQ9ajHUx8UsWKI_B5ibWow"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Canal de YT
-              </Button>
+              <Link to={"/gallery"} className={classes.link}>
+                <Button
+                  color="#000000"
+                  size="lg"
+                  round
+                >
+                  <i className="fas fa-play" />
+                  Boton
+                </Button>
+              </Link>
             </GridItem>
           </GridContainer>
         </div>
