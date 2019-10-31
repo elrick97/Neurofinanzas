@@ -13,6 +13,10 @@ import InfoArea from "components/InfoArea/InfoArea.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
+const foroIcon = require("assets/img/Product-Icons/group-117.svg");
+const educationIcon = require("assets/img/Product-Icons/group-47.svg")
+const tallerIcon = require("assets/img/Product-Icons/group-31.svg")
+
 const useStyles = makeStyles(styles);
 
 export default function ProductSection() {
@@ -36,8 +40,9 @@ export default function ProductSection() {
             <InfoArea
               title=" Foro de Neurofinanzas"
               description="Cada tercer miércoles de mes, charlamos sobre finanzas en un espacio incluyente y libre de ventas. ¡Toda la familia es bienvenida!"
-              icon={Chat}
+              icon={foroIcon}
               iconColor="info"
+              link="https://www.ticketopolis.com/foroneurofinanzas/index.html"
               vertical
             />
           </GridItem>
@@ -45,7 +50,7 @@ export default function ProductSection() {
             <InfoArea
               title="Educación Financiera para empresas"
               description="Tenemos una metodología con programas registrados ante la STPS para que el dinero deje de ser un factor de estrés para el personal de tu empresaa."
-              icon={VerifiedUser}
+              icon={educationIcon}
               iconColor="success"
               vertical
             />
@@ -54,8 +59,9 @@ export default function ProductSection() {
             <InfoArea
               title="Taller “Dinero a tu favor”"
               description="Taller de 8 sesiones, para cambiar la forma en que te relacionas con el dinero y tomar mejores desiciones financieras para una vida próspera."
-              icon={Fingerprint}
+              icon={tallerIcon}
               iconColor="danger"
+              link="https://www.ticketopolis.com/dineroatufavor/index.html"
               vertical
             />
           </GridItem>

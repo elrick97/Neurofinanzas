@@ -39,9 +39,7 @@ export default function WorkSection() {
         message: event.target.message.value
       }
     }
-
-
-
+    
     event.target.name.value = ""
     event.target.email.value = ""
     event.target.message.value = ""
@@ -74,7 +72,7 @@ export default function WorkSection() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Correo Electronico"
+                  labelText="Correo electrónico"
                   id="email"
                   formControlProps={{
                     fullWidth: true
@@ -82,7 +80,7 @@ export default function WorkSection() {
                 />
               </GridItem>
               <CustomInput
-                labelText="¿Porque quieres ser parte de Neurofinanzas?"
+                labelText="¿Por qué te gustaría ser parte del Equipo de Neurofinanzas?"
                 id="message"
                 formControlProps={{
                   fullWidth: true,
@@ -95,7 +93,7 @@ export default function WorkSection() {
               />
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                  <Button color="primary" type="submit" round>¡Enviar!</Button>
+                  <Button color="primary" type="submit" round>Enviar</Button>
                 </GridItem>
               </GridContainer>
             </GridContainer>

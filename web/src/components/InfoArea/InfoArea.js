@@ -13,7 +13,12 @@ const useStyles = makeStyles(styles);
 
 export default function InfoArea(props) {
   const classes = useStyles();
-  const { title, description, iconColor, vertical } = props;
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRoundedCircle,
+    classes.imgFluid
+  );
+  const { title, description, iconColor, vertical, link } = props;
   const iconWrapper = classNames({
     [classes.iconWrapper]: true,
     [classes[iconColor]]: true,
@@ -25,13 +30,11 @@ export default function InfoArea(props) {
   });
   return (
     <div className={classes.infoArea}>
-      <div className={iconWrapper}>
-        <props.icon className={iconClasses} />
-      </div>
+      <img src={props.icon} alt="..." className={imageClasses} />
       <div className={classes.descriptionWrapper}>
         <h4 style={{color: "#35a849"}} className={classes.title}>{title}</h4>
         <p className={classes.description}>{description}</p>
-        <Button color="primary" round>Ver Mas</Button>
+        <Button color="primary" round href={link}>Ver Mas</Button>
       </div>
     </div>
   );

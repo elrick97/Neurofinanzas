@@ -3,7 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import Grid from '@material-ui/core/Grid';
 // @material-ui/icons
 
 // core components
@@ -31,40 +31,83 @@ export default function TeamSection() {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-  const names = ["Persona 0",
-                 "Persona 1",
-                 "Persona 2",
-                 "Persona 3",
-                 "Persona 4",
-                 "Persona 5",
-                 "Persona 6",
-                 "Persona 7",
-                 "Persona 8",
-                 "Persona 9",
-                 "Persona 10"];
-
+  const teamMembers = [
+    {
+      name: "Cristina",
+      role: "Fundadora",
+      picPath: require("assets/img/Team-Pics/team-cristina@3x.png")
+    },
+    {
+      name: "Alejandra",
+      role: "Logística",
+      picPath: require("assets/img/Team-Pics/team-ale@3x.png")
+    },
+    {
+      name: "Yolanda",
+      role: "Talento Creativo",
+      picPath: require("assets/img/Team-Pics/team-yola@3x.png")
+    },
+    {
+      name: "Fernando",
+      role: "Logística",
+      picPath: require("assets/img/Team-Pics/team-fernando@3x.png")
+    },
+    {
+      name: "Blanca",
+      role: "Logística",
+      picPath: require("assets/img/Team-Pics/team-blanca@3x.png")
+    },
+    {
+      name: "Angela",
+      role: "Talento Creativo",
+      picPath: require("assets/img/Team-Pics/team-angela@3x.png")
+    },
+    {
+      name: "Ricardo",
+      role: "Organizador",
+      picPath: require("assets/img/Team-Pics/team-ricardo@3x.png")
+    },
+    {
+      name: "Concepción",
+      role: "Servicio Social",
+      picPath: require("assets/img/Team-Pics/team-conchita@3x.png")
+    },
+    {
+      name: "Priscila",
+      role: "Logística",
+      picPath: require("assets/img/Team-Pics/team-priscila@3x.png")
+    },
+    {
+      name: "Nombre",
+      role: "Sistematización",
+      picPath: require("assets/img/Team-Pics/team-nombre@3x.png")
+    },
+    {
+      name: "Nombre",
+      role: "Funcion",
+      picPath: require("assets/img/Team-Pics/team-nombre@3x.png")
+    }
+  ]
   return (
     <div className={classes.section}>
       <h2 className={classes.title} style={{color: "#35a849"}}>Conoce al equipo</h2>
       <div>
-        <GridContainer>
-            {names.map((name) => {
-              return(
-                <GridItem xs={12} sm={12} md={4}>
-                  <Card plain>
-                    <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                      <img src={cutePic} alt="..." className={imageClasses} />
-                    </GridItem>
-                      <h4 className={classes.cardTitle}>
-                        {name}
-                      <br />
-                      <small className={classes.smallTitle}>Model</small>
-                    </h4>
-                  </Card>
+        <Grid container justify="center" alignItems="center">
+          {teamMembers.map((member) => {
+            return(
+              <Grid item xs={2}>
+                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                  <img src={member.picPath} alt="..." className={imageClasses} />
                 </GridItem>
-              )
-            })}
-        </GridContainer>
+                  <h4 className={classes.cardTitle}>
+                    {member.name}
+                  <br />
+                  <small className={classes.smallTitle}>{member.role}</small>
+                </h4>
+              </Grid>
+            )
+          })}
+        </Grid>
       </div>
     </div>
   );

@@ -24,35 +24,44 @@ import secretariaFoto from "assets/img/secretariaEconomiaLogo.png";
 import ticketopolisFoto from "assets/img/ticketopolisLogo.png";
 import cutePic from "assets/img/cute.png"
 
+import logoEmbajada from "assets/img/Alianzas-Logos/embajada@3x.png";
+import logoLux from "assets/img/Alianzas-Logos/inmobiliaria-lux@3x.png";
+import logoMarket from "assets/img/Alianzas-Logos/mpl@3x.png";
+import logoSecretaria from "assets/img/Alianzas-Logos/secretaria@3x.png"
+import logoTec from "assets/img/Alianzas-Logos/tec-mty@3x.png";
+import logoZonga from "assets/img/Alianzas-Logos/zonga@3x.png";
+import logoUdem from "assets/img/Alianzas-Logos/udem@3x.png";
+import logoTicket from "assets/img/Alianzas-Logos/ticketopolis.svg";
+import logoFotophy from "assets/img/Alianzas-Logos/fotofy.svg";
+
 const useStyles = makeStyles(styles);
 
 export default function TeamSection() {
   const classes = useStyles();
   const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
+    //classes.imgRaised,
+    //classes.imgRoundedCircle,
     classes.imgFluid
   );
   return (
     <div className={classes.section}>
       <h2 className={classes.title} style={{color: "#35a849"}}>Alianzas</h2>
       <div>
-        <GridContainer>
+        <GridContainer justify="center" alignItems="flex-end">
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src= {cutePic} alt="..." className={imageClasses} />
+                <img src= {logoTec} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Tec de Monterrey
-                <br />
               </h4>
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={cutePic} alt="..." className={imageClasses} />
+                <img src={logoLux} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Inmobiliaria Lux
@@ -63,7 +72,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src= {cutePic} alt="..." className={imageClasses} />
+                <img src= {logoZonga} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Zonga
@@ -74,7 +83,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={cutePic} alt="..." className={imageClasses} />
+                <img src={logoEmbajada} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Embajada de USA en México
@@ -85,7 +94,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={cutePic} alt="..." className={imageClasses} />
+                <img src={logoSecretaria} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Secretaría de Economía de N. L
@@ -96,7 +105,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={cutePic} alt="..." className={imageClasses} />
+                <img src={logoUdem} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 UDEM
@@ -107,7 +116,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={cutePic} alt="..." className={imageClasses} />
+                <img src={logoMarket} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Marketplace Literacy Project
@@ -118,7 +127,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src= {cutePic} alt="..." className={imageClasses} />
+                <img src= {logoTicket} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Ticketopolis
@@ -129,7 +138,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={cutePic} alt="..." className={imageClasses} />
+                <img src={logoFotophy} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Fotophy
